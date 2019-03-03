@@ -1,0 +1,142 @@
+:root {
+    --side-area: 35px;
+    --dot-radius: 7px;
+}
+
+.dice {
+    display: none;
+}
+
+.dice > .side {
+    margin: 0.5rem;
+    width: var(--side-area);
+    height: calc(var(--side-area) * 1.125);
+    -webkit-box-shadow: 0 0 5px -1px #999;
+    box-shadow: 0 0 5px -1px #999;
+    position: relative;
+}
+
+.dot {
+    width: var(--dot-radius);
+    height: var(--dot-radius);
+    border-radius: 50%;
+    background-color: #f00;
+    position: absolute;
+}
+
+/*-----------------side-1-----------------*/
+.dice > .side-1 > .dot {
+    top: calc(50% - var(--dot-radius) *.5);
+    left: calc(50% - var(--dot-radius) *.5);
+}
+
+/*-----------------side-2-----------------*/
+.dice > .side-2 > .dot {
+    top: calc(50% - var(--dot-radius) *.5);
+}
+
+.dice > .side-2 > .dot:nth-child(1) {
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-2 > .dot:nth-child(2) {
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+/*-----------------side-3-----------------*/
+
+.dice > .side-3 > .dot:nth-child(1) {
+    top: calc(100%/4 - var(--dot-radius) *.5);
+    right: calc(100%/4 - var(--dot-radius) *.5);
+}
+
+.dice > .side-3 > .dot:nth-child(2) {
+    top: calc(50% - var(--dot-radius) *.5);
+    right: calc(50% - var(--dot-radius) *.5);
+}
+
+.dice > .side-3 > .dot:nth-child(3) {
+    bottom: calc(100%/4 - var(--dot-radius) *.5);
+    left: calc(100%/4 - var(--dot-radius) *.5);
+}
+
+/*-----------------side-4-----------------*/
+
+.dice > .side-4 > .dot:nth-child(1) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-4 > .dot:nth-child(2) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-4 > .dot:nth-child(3) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-4 > .dot:nth-child(4) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+/*-----------------side-5-----------------*/
+
+.dice > .side-5 > .dot:nth-child(1) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-5 > .dot:nth-child(2) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-5 > .dot:nth-child(3) {
+    top: calc(50% - var(--dot-radius) *.5);
+    left: calc(50% - var(--dot-radius) *.5);
+}
+
+.dice > .side-5 > .dot:nth-child(4) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-5 > .dot:nth-child(5) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+/*-----------------side-6-----------------*/
+
+.dice > .side-6 > .dot:nth-child(1) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-6 > .dot:nth-child(2) {
+    top: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-6 > .dot:nth-child(3) {
+    top: calc(50% - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-6 > .dot:nth-child(4) {
+    top: calc(50% - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-6 > .dot:nth-child(5) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    left: calc(50%/2 - var(--dot-radius) *.5);
+}
+
+.dice > .side-6 > .dot:nth-child(6) {
+    bottom: calc(50%/2 - var(--dot-radius) *.5);
+    right: calc(50%/2 - var(--dot-radius) *.5);
+}

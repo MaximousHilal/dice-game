@@ -1,0 +1,116 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    color: #2d3436;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 90vw;
+    height: 75vh;
+    position: relative;
+}
+
+.wrapper .player {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.wrapper .player-option {
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.player-option > div {
+    cursor: pointer;
+    transition: transform 0.75s;
+}
+.player-option > div:hover {
+    transform: scale(1.125);
+}
+.player-option i {
+    font-size: 1.75rem;
+    color: #d63031;
+}
+
+.player-1 {
+    left: 0;
+}
+
+.player-2 {
+    right: 0;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.player .name {
+    
+}
+
+.player .score {
+    font-size: 7rem;
+}
+
+.player .current-score {
+    
+}
+.active {
+    background-color: #eee;
+    box-shadow: 0 0 10px #aaa;
+}
+.active .name {
+    position: relative;
+}
+.active .name::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 7.5px);
+    right: -10%;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+    background-color: #d63031;
+    box-shadow: 0 0 10px #d63031;
+}
+.active .name,.score {
+   animation: score 1s forwards linear;
+}
+
+@keyframes score {
+    to {
+        text-shadow: 0 5px 15px #000;
+    }
+}
